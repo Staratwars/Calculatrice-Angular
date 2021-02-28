@@ -1,3 +1,19 @@
 p {
   font-family: Lato;
 }
+
+form {
+  grid-template-columns: 1fr 20px 1fr;
+  grid-gap: 5px;
+  grid-auto-rows: 1fr;
+  margin: auto;
+  width: 400px;
+  background: #fafafa;
+  border: 1px solid #ccc;
+  padding: 15px;
+}
+
+input {
+  outline: none;
+  border: yes;
+}

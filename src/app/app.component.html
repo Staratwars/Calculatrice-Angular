@@ -7,10 +7,10 @@
   />
 	<h1>KING COBRA Calculator</h1>
 </div>
-
-<! -- SOMME -->
-	<p>Somme</p>
-	<input
+<form id="cal-form">
+	<! -- SOMME -->
+		<p>Somme</p>
+		<input
   type="text"
   [(ngModel)]="somPrem"
   name="sumFirstValidation"
@@ -18,8 +18,9 @@
   pattern="[-+]?[0-9]*[.,]?[0-9]+"
   minlength="1"
 />
+
 +
-	<input
+		<input
   type="text"
   [(ngModel)]="sommeSeconde"
   name="sumSecondValidation"
@@ -27,21 +28,21 @@
   pattern="[-+]?[0-9]*[.,]?[0-9]+"
   minlength="1"
 />
-	<button (click)="somme()">=</button><b>{{sumResult | number: '1.0-2'}}</b>
-	<! -- SOMME -->
+		<button (click)="somme()">=</button><b>{{sumResult | number: '1.0-2'}}</b>
+		<! -- SOMME -->
 
-		<! -- SOUSTR -->
-			<p>Soustraction</p>
-			<input
+			<! -- SOUSTR -->
+				<p>Soustraction</p>
+				<input
   type="text"
-  [(ngModel)]="subFirst"
+  [(ngModel)]="soustractionPremier"
   name="subFirstValidation"
   #subFirstValidation="ngModel"
   pattern="[-+]?[0-9]*[.,]?[0-9]+"
   minlength="1"
 />
 -
-			<input
+				<input
   type="text"
   [(ngModel)]="subSecond"
   name="subSecondValidation"
@@ -49,16 +50,16 @@
   pattern="[-+]?[0-9]*[.,]?[0-9]+"
   minlength="1"
 />
-			<button
+				<button
   [disabled]="!subFirstValidation.valid || !subSecondValidation.valid"
   (click)="soustraction()"
 >
   =</button><b>{{subResult | number: '1.0-2'}}</b>
-			<! -- SOUSTR -->
+				<! -- SOUSTR -->
 
-				<! -- MULTIPLICATION -->
-					<p>Multiplication</p>
-					<input
+					<! -- MULTIPLICATION -->
+						<p>Multiplication</p>
+						<input
   type="text"
   [(ngModel)]="byFirst"
   name="byFirstValidation"
@@ -67,7 +68,7 @@
   minlength="1"
 />
 *
-					<input
+						<input
   type="text"
   [(ngModel)]="bySecond"
   name="bySecondValidation"
@@ -75,16 +76,16 @@
   pattern="[-+]?[0-9]*[.,]?[0-9]+"
   minlength="1"
 />
-					<button
+						<button
   [disabled]="!byFirstValidation.valid || !bySecondValidation.valid"
   (click)="multiplication()"
 >
   =</button><b>{{byResult | number: '1.0-2'}}</b>
-					<! -- MULTIPLICATION -->
+						<! -- MULTIPLICATION -->
 
-						<! -- QUOTIENT -->
-							<p>Quotient</p>
-							<input
+							<! -- QUOTIENT -->
+								<p>Quotient</p>
+								<input
   type="text"
   [(ngModel)]="divFirst"
   name="divFirstValidation"
@@ -93,7 +94,7 @@
   minlength="1"
 />
 /
-							<input
+								<input
   type="text"
   [(ngModel)]="divSecond"
   name="divSecondValidation"
@@ -102,15 +103,22 @@
   minlength="1"
 />
 
-							<button (click)="division()">=</button><b>{{divResult | number: '1.0-2'}}</b>
-							<br />
-							<button (click)="clearAllTexts()">
+								<button (click)="division()">=</button><b>{{divResult | number: '1.0-2'}}</b>
+								<br />
+
+</form>
+								<button (click)="clearAllTexts()">
   <! -- QUOTIENT -->
 
   CLEAR
 </button>
 
-							<button (click)="save()">
+								<button (click)="save()">
 
   SAUVEGARDER
 </button>
+
+								<h2>Historique</h2>
+                
+
+                

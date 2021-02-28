@@ -11,7 +11,7 @@ export class AppComponent {
   sommeSeconde: string;
   sumResult: number;
 
-  subFirst: string;
+  soustractionPremier: string;
   subSecond: string;
   subResult: number;
 
@@ -28,7 +28,8 @@ export class AppComponent {
   }
 
   soustraction() {
-    this.subResult = parseFloat(this.subFirst) - parseFloat(this.subSecond);
+    this.subResult =
+      parseFloat(this.soustractionPremier) - parseFloat(this.subSecond);
   }
 
   multiplication() {
@@ -37,12 +38,13 @@ export class AppComponent {
 
   division() {
     this.divResult = parseFloat(this.divFirst) / parseFloat(this.divSecond);
+    this.save();
   }
 
   clearAllTexts() {
     this.somPrem = "";
     this.sommeSeconde = "";
-    this.subFirst = "";
+    this.soustractionPremier = "";
     this.subSecond = "";
     this.byFirst = "";
     this.bySecond = "";
@@ -50,8 +52,5 @@ export class AppComponent {
     this.divSecond = "";
   }
 
-  save() {
-    
-  
-  }
+  save() {}
 }
